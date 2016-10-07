@@ -14,22 +14,62 @@ output:
 
 
 <b><br></b>
+<b><br></b>
+
+
+Pueden descargar este documento en pdf haciendo clic [aquí](https://github.com/Ciespinosa/cargarDatos/blob/master/index.pdf)
+
 
 #<b>Creando un proyecto en RStudio</b>
 
 ---------
-<b><br></b>
+
 
 __¿Cómo creamos un proyecto?__
 
-Veamos el siguiente video a ver si nos ayuda.
+A continuación les presentaré una série de pasos que deben seguir para crear un nuevo proyecto en RStudio.
 
+1. Abrir RStudio
+2. Hacer clic en `file` y seleccionar new `Project`
+3. En la nueva ventana que se abrio podemos seleccionar de entre tres opciones, puesto que aún no estamos trabajando con versiones de control, por ahora podemos seleccionar entre nuevo directorio `New Directory` o un directorio existente `Existing Directory`.
 
-<center><video src="cat.mp4" type="video/mp4" autoplay controls></video></center>
+El nuevo directorio lo que hará es generar una nueva carpeta a partir de la cual vamos a trabajar. Cuando seleccionamos un directorio existente RStudio generará un proyecto dentro de esta carpeta.  Por organización siempre que estoy iniciando un nuevo proyecto prefiero crear un nuevo directorio en el cual colocaré unicamente lo que voy a utilizar en los análisis.
 
+4. Si hemos elegido un directorio existente, la siguiente ventana nos permite decir cual es la carpeta que quiero enlazar. Hacer clic en `browse` buscar la carpeta donde colocaré el proyecto y aceptar.
+
+5. Si hemos elegido encambio un directorio nuevo tendremos dos casilleros, el primero indica el nombre que le vamos a poner a la carpeta `Directory Name` y el segundo nos indica donde alojaremos esa carpeta `browse`
 
 
 ##Conozcamos rStudio antes de empezar
+
+<center>![](RStudio.jpg)</center>
+
+
+Como vemos en la gráfica RStudio esta compuesto por tres ventanas.  Seguramente en su caso si acaba de generar el proyecto le aparecerán únicamente tres ventanas. A continuación describiré cada una de las ventanas.
+
+La __primera ventana__ (la que en su caso seguramente no asoma, izquierda superior) lo constituye documentos que pueden ser de varios tipos. El tipo básico es un documento con extención __.R__ y que nos sirven para ir guardando el código que vamos construyendo para el análisis.  Vamos abrir un script, esto lo podemos hacer de almenos tres maneras, la primera es ir al menu de la consolo seleccionar `File > New File > script`, la segunda forma es seleccionar el icono del documento con una cruz verde ![](RStudio_nuevo.jpg) y seleccionar `R script`.  La última opción es hacerlo desde el teclado si presionan alt + shift (mayusculas) y la tecla __N__ obtendrá el mismo resultado.
+
+Existen otros muchos archivos que podemos cargar, pero por ahora este es suficiente.
+
+La __segunda ventana__ (derecha superior), esta ventana se verán todos los objetos qu iremos cargando durante el trabajo en RStudio por ahora esta ventana estará vacia.  
+
+>Vamos a generar algunos objetos y ver lo que pasa.
+
+```{r}
+nombre<- "Carlos Ivan"
+apellido<- "Espinosa Iñiguez"
+matriz<- matrix(1:20, 5,4)
+
+```
+
+Ahora podemos ver los objetos creados, algunos salen como valores y la matriz sale como datos.  Los objetos que son datos puedo abrirlos para ver su estructura.  Si hacen clic en el nombre matriz veran que se abre una nueva hoja en la primera ventana que corresponde a estos datos.
+
+La __tercera columna__ (izquierda abajo), corresponde a la consola de R, esta es la consola donde se ejecutarán todos los códigos y se realizarán los análisis.
+
+La _cuarta columna__ (derecha abajo), en esta ventana tenemos varias pestañas.  La primera `File` nos muestra todos los archivos que estan en la carpeta de mi proyecto. La siguiente pestaña `Plots` en esta se veran los gráficos que ire realizando. La pestaña `Help` puede ser usada para pedir ayuda de algún paquete o función que me interese.
+
+Bueno ya conocemos RStudio ahora si a trabajar.
+
 
 
 
@@ -37,7 +77,7 @@ Veamos el siguiente video a ver si nos ayuda.
 
 ----------
 
-Vamos a leer unos datos alamacenados en formato csv. Existen varias formas para leer datos desde un archivo txt, csv o xls. Empezaremos con los primeros formatos. Antes de nada necesitamos los datos con los que vamos a trabajar los podemos encontrar [aquí](https://github.com/dhduncan/ConoceR/tree/master/Dominio_de_datos_1/ciclovia.csv) en formato csv y [aquí](https://github.com/dhduncan/ConoceR/tree/master/Dominio_de_datos_1/ciclovia.xlsx) en formato xlsx. Descargamos los archivos y los ponemos en la carpeta del proyecto. Para descargar los archivos csv hacer clic en __RAW__
+Vamos a leer unos datos alamacenados en formato csv. Existen varias formas para leer datos desde un archivo txt, csv o xls. Empezaremos con los primeros formatos. Antes de nada necesitamos los datos con los que vamos a trabajar los podemos encontrar [aquí](https://github.com/Ciespinosa/cargarDatos/blob/master/AMEBIASIS_LOJA.csv) en formato csv y [aquí](https://github.com/Ciespinosa/cargarDatos/blob/master/AMEBIASIS_LOJA.xlsx) en formato xlsx. Descargamos los archivos y los ponemos en la carpeta del proyecto. Para descargar los archivos csv hacer clic en __RAW__
 
 1. El primer paso es saber si nuestro archivo esta en la ubicación del directorio de mi proyecto, para esto utilizaremos la función __dir()__
 
