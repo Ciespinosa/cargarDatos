@@ -83,6 +83,8 @@ Vamos a leer unos datos almacenados en formato csv. Existen varias formas para l
 
 Teclea en tu consola esta función y mira si tus datos se encuentran ahí?
 
+En la consola debería aparecer AMEBIASIS_LOJA, si no aparece significa que los datos no estan en la carpeta del proyecto generada.  Confirma esto y vuelvelo a intentar.
+
 2. Ahora a cargar los datos usando las funciones read.table() y read_excel()
 
 ##Usando read.table
@@ -103,6 +105,8 @@ Bueno lo que le estamos diciendo es que la primera fila se encuentra los nombres
 En este caso, estamos diciendo que la separación entre columnas es una coma.  Al ser formato csv esto es evidente, pero usted podría tener un txt separado por tabulaciones por ejemplo, o por cualquier otro caracter.
 
 ##Usando read_excel
+
+Antes de nada necesitamos instalar el paquete `readxl` desde internet, esto se hace una única vez con la función `install.packages()`. Teclea en la consola `install.packages("readxl")`, para que corra esta función necesitas estar conectado a internet.
 
 ```{r}
 require(readxl)
