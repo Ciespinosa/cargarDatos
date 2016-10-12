@@ -205,6 +205,7 @@ matriz&lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="
 <li>El primer paso es saber si nuestro archivo está en la ubicación del directorio de mi proyecto, para esto utilizaremos la función <strong>dir()</strong></li>
 </ol>
 <p>Teclea en tu consola esta función y mira si tus datos se encuentran ahí?</p>
+<p>En la consola debería aparecer AMEBIASIS_LOJA, si no aparece significa que los datos no estan en la carpeta del proyecto generada. Confirma esto y vuelvelo a intentar.</p>
 <ol start="2" style="list-style-type: decimal">
 <li>Ahora a cargar los datos usando las funciones read.table() y read_excel()</li>
 </ol>
@@ -219,6 +220,7 @@ matriz&lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="
 </div>
 <div id="usando-read_excel" class="section level2">
 <h2><span class="header-section-number">2.2</span> Usando read_excel</h2>
+<p>Antes de nada necesitamos instalar el paquete <code>readxl</code> desde internet, esto se hace una única vez con la función <code>install.packages()</code>. Teclea en la consola <code>install.packages(&quot;readxl&quot;)</code>, para que corra esta función necesitas estar conectado a internet.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(readxl)</code></pre></div>
 <pre><code>## Loading required package: readxl</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">read_excel</span>(<span class="st">&quot;AMEBIASIS_LOJA.xlsx&quot;</span>, 
