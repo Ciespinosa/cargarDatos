@@ -1,14 +1,14 @@
 ---
 title: "Cargando datos"
-author: "Carlos IvÃ¡n Espinosa"
+author: "Carlos Iván Espinosa"
 date: "10 de octubre de 2018"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     highlight: haddock
     number_sections: yes
     theme: cosmo
+    toc: yes
+  pdf_document:
     toc: yes
 ---
 
@@ -138,7 +138,7 @@ Lo que realmente me dice, es la cantidad de amebiasis en cada cantón, no la inc
 2. Queremos graficar estos resultados, pero que se grafique de una forma ordenada del cantón con menos incidencia al cantón con más incidencia. Para esto utilizaremos la función __order__. Use _?_ o _help()_ para saber cómo puede utilizar la función order.
 
 
-Con esto hemos terminado el primer ejercicio.  Espero que estén satisfechos ya están trabajando en `r` han aprendido como cargar los datos usando read.table y read_xls, han visto cómo podemos utilizar funciones como; order, head y str, y hemos iniciado a trabajar con gráficas.  En las siguientes lecciones nos adentraremos en funciones que nos servirán para conocer nuestros datos.  
+Con esto hemos terminado el primer ejercicio.  Espero que estén satisfechos ya están trabajando en `R` han aprendido como cargar los datos usando read.table y read_xls, han visto cómo podemos utilizar funciones como; order, head y str, y hemos iniciado a trabajar con gráficas.  En las siguientes lecciones nos adentraremos en funciones que nos servirán para conocer nuestros datos.  
 <b><br></b>
 <b><br></b>
 
