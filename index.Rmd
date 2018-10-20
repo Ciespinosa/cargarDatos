@@ -139,6 +139,7 @@ Lo que realmente me dice, es la cantidad de amebiasis en cada cantón, no la inc
 
 
 Con esto hemos terminado el primer ejercicio.  Espero que estén satisfechos ya están trabajando en `R` han aprendido como cargar los datos usando read.table y read_xls, han visto cómo podemos utilizar funciones como; order, head y str, y hemos iniciado a trabajar con gráficas.  En las siguientes lecciones nos adentraremos en funciones que nos servirán para conocer nuestros datos.  
+
 <b><br></b>
 <b><br></b>
 
