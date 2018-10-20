@@ -1,14 +1,14 @@
 ---
 title: "Cargando datos"
-author: "Carlos Iván Espinosa"
-date: "7 de octubre de 2016"
+author: "Carlos IvÃ¡n Espinosa"
+date: "10 de octubre de 2018"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     highlight: haddock
     number_sections: yes
     theme: cosmo
-    toc: yes
-  pdf_document:
     toc: yes
 ---
 
@@ -18,60 +18,6 @@ output:
 
 
 Pueden descargar este documento en pdf haciendo clic [aquí](https://github.com/Ciespinosa/cargarDatos/blob/master/index.pdf)
-
-
-#<b>Creando un proyecto en RStudio</b>
-
----------
-
-
-__¿Cómo creamos un proyecto?__
-
-A continuación les presentaré una serie de pasos que deben seguir para crear un nuevo proyecto en RStudio.
-
-1. Abrir RStudio
-2. Hacer clic en `file` y seleccionar new `Project`
-3. En la nueva ventana que se abrió podemos seleccionar de entre tres opciones, puesto que aún no estamos trabajando con versiones de control, por ahora podemos seleccionar entre nuevo directorio `New Directory` o un directorio existente `Existing Directory`.
-
-El nuevo directorio lo que hará es generar una nueva carpeta a partir de la cual vamos a trabajar. Cuando seleccionamos un directorio existente RStudio generará un proyecto dentro de esta carpeta.  Por organización siempre que estoy iniciando un nuevo proyecto prefiero crear un nuevo directorio en el cual colocaré únicamente lo que voy a utilizar en los análisis.
-
-4. Si hemos elegido un directorio existente, la siguiente ventana nos permite decir cuál es la carpeta que quiero enlazar. Hacer clic en `browse`  buscar la carpeta donde colocaré el proyecto y aceptar.
-
-5. Si hemos elegido un directorio nuevo tendremos dos casilleros, el primero indica el nombre que le vamos a poner a la carpeta `Directory Name` y el segundo nos indica donde alojaremos esa carpeta `browse`
-
-
-##Conozcamos rStudio antes de empezar
-
-<center>![](RStudio.jpg)</center>
-
-
-Como vemos en la gráfica RStudio está compuesto por cuatro ventanas.  Seguramente en su caso, si acaba de generar el proyecto le aparecerán únicamente tres ventanas. A continuación describiré cada una de las ventanas.
-
-La __primera ventana__ (la que en su caso seguramente no asoma, izquierda superior) lo constituye documentos que pueden ser de varios tipos. El tipo básico es un documento con extensión __.R__ y que nos sirven para ir guardando el código que vamos construyendo para el análisis.  Vamos abrir un script, esto lo podemos hacer de al menos tres maneras, la primera es ir al menú de la consola seleccionar `File > New File > script`, la segunda forma es seleccionar el icono del documento con una cruz verde ![](RStudio_nuevo.jpg) y seleccionar `R script`.  La última opción es hacerlo desde el teclado si presionan alt + shift (mayúsculas) y la tecla __N__ obtendrá el mismo resultado.
-
-Existen otros muchos archivos que podemos cargar, pero por ahora este es suficiente.
-
-La __segunda ventana__ (derecha superior), esta ventana se verán todos los objetos que iremos cargando durante el trabajo en RStudio por ahora esta ventana estará vacía.  
-
->Vamos a generar algunos objetos y ver lo que pasa.
-
-```{r}
-nombre<- "Carlos Ivan"
-apellido<- "Espinosa Iñiguez"
-matriz<- matrix(1:20, 5,4)
-
-```
-
-Ahora podemos ver los objetos creados, algunos salen como valores y la matriz sale como datos.  Los objetos que son datos, puedo abrirlos para ver su estructura.  Si hacen clic en el nombre matriz verán que se abre una nueva hoja en la primera ventana que corresponde a estos datos.
-
-La __tercera columna__ (izquierda abajo), corresponde a la consola de R, esta es la consola donde se ejecutarán todos los códigos y se realizarán los análisis.
-
-La _cuarta columna__ (derecha abajo), en esta ventana tenemos varias pestañas.  La primera `File` nos muestra todos los archivos que están en la carpeta de mi proyecto. La siguiente pestaña `Plots` en esta se verán los gráficos que iré realizando. La pestaña `Help` puede ser usada para pedir ayuda de algún paquete o función que me interese.
-
-Bueno ya conocemos RStudio ahora si a trabajar.
-
-
-
 
 #<b>Leyendo Datos</b>
 
@@ -129,9 +75,9 @@ ameLojaE<-read_excel("AMEBIASIS_LOJA.xlsx",
 
 ```
 
-Le he puesto a este objeto al final _E_ para saber que es la tabla que he abierto desde excel, si no ponemos esto el objeto que creamos antes será sobrescrito, y r no nos avisará que se sobrescribe así que hay que tener cuidado.
+Le he puesto a este objeto al final _E_ para saber que es la tabla que he abierto desde excel, si no ponemos esto el objeto que creamos antes será sobrescrito, y R no nos avisará que se sobrescribe así que hay que tener cuidado.
 
-Cuando leemos desde un archivo excel lo primero que debemos hacer es llamar al paquete que nos permite leer archivos excel ´readxl´ esto lo hacemos con la función _library_ podríamos utilizar también la función _require_.  
+Cuando leemos desde un archivo excel lo primero que debemos hacer es llamar al paquete que nos permite leer archivos excel `readxl` esto lo hacemos con la función _library_ podríamos utilizar también la función _require_.  
 
 Lo siguiente es escribir el nombre del archivo, recuerde que R es sensible a las mayúsculas así que debe poner exactamente como lo muestra el nombre de su archivo.  Posteriormente, le decimos en que hoja se encuentran los datos _sheet_ y que debe poner en las celdas vacías _na_, en este este caso le decimos que ponga "NA" 
 
